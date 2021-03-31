@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ea31605f1ca5e964ee6002484ce60bab89318b851b95b2b69ae80bd2356a22c6
+-- hash: 2fc96b027a07b6c3cc76d4ea7991861b5870b3337dc02407b551d5424d8d0aa0
 
 name:           raytracing
 version:        0.1.0.0
@@ -18,7 +18,7 @@ license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
-    README.md
+    README.rst
     ChangeLog.md
 
 source-repository head
@@ -44,8 +44,9 @@ executable raytracing-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
-    , raytracing
+      base == 4.*,
+      raytracing,
+      gtk
   default-language: Haskell2010
 
 test-suite raytracing-test
@@ -57,6 +58,6 @@ test-suite raytracing-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
-    , raytracing
+      base == 4.*,
+      raytracing
   default-language: Haskell2010
