@@ -1,10 +1,10 @@
 name: CI
 
-# Trigger the workflow on push or pull request, for master and dev
+# Trigger the workflow on push or pull request, for only master
 on:
   pull_request:
   push:
-    branches: [master, dev]
+    branches: [master]
 
 jobs:
   cabal:
