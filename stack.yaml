@@ -1,0 +1,18 @@
+flags: {}
+resolver:
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/8.yaml
+
+extra-deps:
+- gtk-0.15.5
+- cairo-0.13.8.1
+- gio-0.13.8.1
+- glib-0.13.8.1
+- gtk2hs-buildtools-0.13.8.0
+- pango-0.13.8.1
+
+nix:
+  packages:
+    - autoconf
+    - pkgconfig
+    - xorg.libX11
+    - xorg.libXft

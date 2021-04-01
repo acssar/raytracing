@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2fc96b027a07b6c3cc76d4ea7991861b5870b3337dc02407b551d5424d8d0aa0
+
+name:           raytracing
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/raytracing#readme>
+homepage:       https://github.com/githubuser/raytracing#readme
+bug-reports:    https://github.com/githubuser/raytracing/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.rst
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/raytracing
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_raytracing
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable raytracing-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_raytracing
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base == 4.*,
+      raytracing,
+      gtk
+  default-language: Haskell2010
+
+test-suite raytracing-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_raytracing
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base == 4.*,
+      raytracing
+  default-language: Haskell2010
