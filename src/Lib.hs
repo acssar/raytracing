@@ -154,7 +154,7 @@ reflectDir :: Vector -> Vector -> Vector
 reflectDir i n = i <-> (n *> (2*(n *. i)))
 
 
--- refraction of vector     (something difficult)
+-- refraction of vector     (now unused)
 
 refractDir :: Vector -> Vector -> Double -> Vector
 refractDir i n r = if (v < 0) then (0.0, 0.0, 0.0) else norm $ (i *> r_c) <+> (n *> (r_c*(abs c) - sqrt v))
